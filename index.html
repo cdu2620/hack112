@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="all" type="text/css" href="css/styles.css"/>
+</head>
+<body>
+   <br/><br/>
+<br/><br/>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <label>
+    <input type="checkbox"  />
+    <div class="card">
+        <div class="front"><img src="10_Apples_Puffle_Food_icon.png" style="width: 50%"></div>
+        <div class="back">苹果</div>
+    </div>
+</label>
+</div>
+
+<div class="mySlides fade">
+  <label>
+    <input type="checkbox"  />
+    <div class="card">
+        <div class="front">4</div>
+        <div class="back">四</div>
+    </div>
+</label>
+</div>
+
+<div class="mySlides fade">
+  <label>
+    <input type="checkbox"  />
+    <div class="card">
+        <div class="front"><img src="img_438615.png" style="width: 50%"></div>
+        <div class="back">猫</div>
+    </div>
+</label>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+    <br/><br/><br/><br/><br/>
+    <a href="game1.html" class="next-round">Next &raquo;</a>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
